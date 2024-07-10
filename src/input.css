@@ -1,0 +1,60 @@
+/* ...................Google Fonts  .......................... */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ...................Global styles.......................... */
+body {
+  font-family: 'nantes', sans-serif;
+  background-color: #f7fafc; /* Light grey background */
+  color: #2d3748; /* Dark grey text color */
+}
+
+/* ...................Layer base .......................... */
+@layer base {
+  h1 {
+    @apply text-4xl font-bold text-gray-900;
+  }
+  h2 {
+    @apply text-3xl font-semibold text-gray-800;
+  }
+  p {
+    @apply text-base leading-relaxed text-gray-700;
+  }
+  a {
+    @apply text-blue-500 hover:text-blue-700;
+  }
+}
+
+/* ...................Layer components .......................... */
+
+@layer components {
+  .x-btn-primary {
+    @apply bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-600;
+  }
+
+  .x-card {
+    @apply bg-white shadow-md rounded-lg p-6;
+  }
+
+  .x-input-field {
+    @apply border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+}
+
+/* ...................Layer utilities .......................... */
+
+@layer utilities {
+  .x-shadow {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+  }
+  .x-bg-gradient {
+    background: linear-gradient(45deg, #f3ec78, #af4261);
+  }
+  .x-grid-gap {
+    grid-gap: 1rem;
+  }
+}
